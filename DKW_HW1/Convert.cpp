@@ -26,7 +26,7 @@ void Convert::startConversionProgram()
     int baseOfNumberToConvert = 10; // Will hold the base of the number user wants to convert
     
     // Prompt the user for the number they would like to convert
-    cout << "Please enter the number you would like to convert: ";
+    cout << "Please enter the number you would like to convert to base 10: ";
     cin >> numberToConvert;
     
     // Prompt the user for the base of the number they previously supplied

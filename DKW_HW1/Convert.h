@@ -6,6 +6,7 @@
 //  Copyright © 2019 Derrick. All rights reserved.
 //
 
+// Interface of Convert Class
 class Convert
 {
 
