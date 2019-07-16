@@ -12,6 +12,6 @@ class Convert
 public:
     Convert();
     void startConversionProgram();
-    bool validUserSuppliedNumberBasedOnBase(int number, int base);
+    bool isValidNumberBasedOnBase(int number, int base);
     int convertNumberToBase10(int number, int base);
 };

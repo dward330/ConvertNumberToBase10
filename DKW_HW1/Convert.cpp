@@ -33,7 +33,7 @@ void Convert::startConversionProgram()
     cout << "\nPlease enter the base of the number you supplied: ";
     cin >> baseOfNumberToConvert;
     
-    if (Convert::validUserSuppliedNumberBasedOnBase(numberToConvert, baseOfNumberToConvert))
+    if (Convert::isValidNumberBasedOnBase(numberToConvert, baseOfNumberToConvert))
     {
         // If user supplied input was valid, print message to user telling them their base 10 equivalent number
         cout << numberToConvert << " of base " << baseOfNumberToConvert << " is equal to " << Convert::convertNumberToBase10(numberToConvert, baseOfNumberToConvert) << " of base 10" << endl << endl;
@@ -60,7 +60,7 @@ int Convert::convertNumberToBase10(int number, int base)
 }
 
 /* Will validate if user supplied number is valid based on the supplied base */
-bool Convert::validUserSuppliedNumberBasedOnBase(int number, int base)
+bool Convert::isValidNumberBasedOnBase(int number, int base)
 {
     int remainingNumbersToProcess = number; // Will hold a copy of the number to convert
     bool inputWasValid = true; // Will hold whether the user's number input was valid for the base they stated it is in
@@ -71,10 +71,12 @@ bool Convert::validUserSuppliedNumberBasedOnBase(int number, int base)
         // Print Error Message to user if an invalid numerical value is found for the given base
         if (currentDigitOfFocus >= base)
         {
-            cout << "Invalid number found for the base " << base << " numerical alphabet! -> " << currentDigitOfFocus << endl;
+            cout << "Invalid number found, for the base " << base << " numerical alphabet! -> " << currentDigitOfFocus << endl;
             inputWasValid = false;
         }
     }
+    
+    cout << endl;
     
     // Return whether the user supplied valid number
     return inputWasValid;
