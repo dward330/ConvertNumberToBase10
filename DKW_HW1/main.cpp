@@ -9,8 +9,9 @@
 #include "Convert.h"
 
 int main(int argc, const char * argv[]) {
-    Convert convertProgram;
+    Convert convertProgram; // Declares Convert variable
     
+    // Starts the Conversion Program/Routine
     convertProgram.startConversionProgram();
     
     return 0;
